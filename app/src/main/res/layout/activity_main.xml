@@ -1,18 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.com.fiap.desafio2.petshop78065.MainActivity">
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Escolha qual cachorro deseja:"
+        android:textSize="20dp"
+        android:textColor="@color/fiap_primary"
+        android:layout_margin="10dp"/>
 
-</android.support.constraint.ConstraintLayout>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Border Collie R$ 800,00"
+            android:textColorLink="@color/fiap_primary"
+            android:id="@+id/rb_border_collie"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pit Bull R$ 750,00"
+            android:textColorLink="@color/fiap_primary"
+            android:id="@+id/rb_pit_bull"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pastor Alemão R$700,00"
+            android:textColorLink="@color/fiap_primary"
+            android:id="@+id/rb_pastor_alemao"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pastor canadense R$800,00"
+            android:textColorLink="@color/fiap_primary"
+            android:id="@+id/rb_pastor_canadense"/>
+
+    </RadioGroup>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fêmea"
+        android:id="@+id/cb_femea"
+        android:layout_marginHorizontal="10dp" />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adestrado"
+        android:id="@+id/cb_adestrado"
+        android:layout_marginHorizontal="10dp"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Com todas as vacinas em dia"
+        android:id="@+id/cb_vacinas"
+        android:layout_marginHorizontal="10dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CALCULAR"
+        android:id="@+id/btn_calcular"
+        android:onClick="calcular"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="R$00,00"
+        android:textSize="50dp"
+        android:textAlignment="center"/>
+</LinearLayout>
